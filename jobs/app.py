@@ -1,11 +1,14 @@
 from flask import render_template, Flask
 
 
-@route('/')
-@route('/jobs')
+app = Flask(__name__)
+
+
+@app.route('/')
+@app.route('/jobs')
 def jobs():
     render_template('index.html')
 
 
-app = Flask(__name__)
+
 
